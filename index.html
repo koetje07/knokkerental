@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Knokke Luxury</title>
+    <style>
+        /* Basic styling for demonstration purposes */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f8f8;
+        }
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        .menu-btn {
+            position: absolute;
+            left: 10px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #fff;
+            cursor: pointer;
+            font-size: 1.5em;
+        }
+        .menu {
+            display: none;
+            text-align: center;
+            margin-top: 50px; /* Adjusted to accommodate the fixed header */
+        }
+        .menu a {
+            color: #333;
+            text-decoration: none;
+            padding: 10px 20px;
+            margin: 0 10px;
+            border-radius: 5px;
+            background-color: #fff;
+            border: 2px solid #333;
+            transition: all 0.3s ease;
+            font-weight: bold;
+            font-size: 1.2em;
+        }
+        .menu a:hover {
+            background-color: #333;
+            color: #fff;
+        }
+        .container {
+            margin-top: 80px; /* Adjusted to accommodate the fixed header */
+            padding: 20px;
+            text-align: center; /* Center the estate boxes horizontally */
+        }
+        .estate {
+            border: 1px solid #ccc;
+            margin: 20px auto; /* Adjusted margin to center horizontally */
+            padding: 20px;
+            cursor: pointer; /* Add cursor pointer to indicate clickable */
+            width: 90%; /* Adjusted width */
+            max-width: 100%; /* Set maximum width to 100% of the viewport */
+            transition: all 0.3s ease;
+            background-color: #fff;
+            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        .estate:hover {
+            transform: translateY(-5px);
+            box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+        }
+        .estate img {
+            width: 100%; /* Make the image span the whole width */
+            height: auto;
+            border-radius: 5px;
+        }
+        .estate h2 {
+            margin-top: 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <span class="menu-btn" onclick="toggleMenu()">&#9776;</span>
+        <h1>Knokke Luxury</h1>
+        <div class="menu" id="menu">
+            <a href="/dashboard/booking.html">Booking Calendar</a>
+            <a href="/dashboard/hotspots.html">Knokke Hotspots</a>
+        </div>
+    </header>
+    <div class="container">
+        <div class="estate" onclick="window.location.href = '/dashboard/estate1.html';">
+            <img src="/dashboard/villa1/1.jpg" alt="Estate 1">
+        </div>
+        <div class="estate" onclick="window.location.href = '/dashboard/estate2.html';">
+            <img src="/dashboard/villa2/pic1.jpg" alt="Estate 2">
+        </div>
+        <div class="estate" onclick="window.location.href = '/dashboard/estate3.html';">
+            <img src="/dashboard/images/image4.png" alt="Estate 3">
+        </div>
+    </div>
+
+    <!-- JavaScript for menu toggle -->
+    <script>
+        function toggleMenu() {
+            var menu = document.getElementById("menu");
+            if (menu.style.display === "block") {
+                menu.style.display = "none";
+            } else {
+                menu.style.display = "block";
+            }
+        }
+    </script>
+</body>
+</html>
